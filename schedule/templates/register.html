@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+  <div class="container">
+    <h1>Register</h1>
+    <form class="register_form"method="post">
+      <div class="form-group">
+
+        <label for="username">User Name:</label>
+        <input class="form-control" name="username" id="username" required>
+      </div>
+      <div class="">
+        <label for="password">Password:</label>
+        <input class="form-control"  type="password" name="password" id="password" required>
+      </div>
+
+      <input class="btn btn-primary mt-2" type="submit" value="Register">
+    </form>
+  </div>
+
+
+
+</main>
+
+{% endblock %}

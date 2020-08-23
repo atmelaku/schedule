@@ -1,0 +1,28 @@
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 18px;
+  font-size: calc(10px + 2vmin);
+}
+
+body {
+  background: lightblue;
+}
+
+.column {
+
+  content: "";
+  display: table;
+  clear: both;
+
+}
+
+.row {
+  float: left;
+  width: 30%;
+
+}

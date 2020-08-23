@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<form method="POST">
+
+  <label for="years">Year:</label>
+  <input type="text" name="years" value="{{ schedule['years']}}"><br>
+
+  <label class="col-sm-2 col-form-label" for="months">Month:</label>
+  <input type="text" name="months" value="{{ schedule['months']}}"><br>
+
+  <label class="col-sm-2 col-form-label" for="days">Day:</label>
+  <input type="text" name="days" value="{{ schedule['days']}}" required><br>
+
+  <label class="col-sm-2 col-form-label" for="date">Date</label>
+  <input type="text" name="date"  value="{{ schedule['date']}}" required><br>
+
+  <label class="col-sm-2 col-form-label" for="shift">Shift:</label>
+  <input type="text" name="shift" value="{{ schedule['shift']}}" /> <br>
+
+
+  <label class="col-sm-2 col-form-label" for="description">House:</label>
+  <input type="text" name="description" value="{{ schedule['years']}}">
+
+  <input class="btn btn-success" type="submit" name="" value="Save">
+
+
+</form>
+
+{%  endblock %}
