@@ -141,9 +141,8 @@
       <td>{{ schedules ['years']}}</td>
       <td>{{ schedules ['days']}}</td>
       <td>{{ schedules ['shift']}}</td>
-
-      <td><object type="" data="{{ schedules ['description']}}"></object></td>
-      <td>
+      <td>{{ schedules ['description']}}</td>
+<td>
 
 
         <form action="{{ url_for('schedules.delete_schedule', id=schedules['id']) }}" method="post">

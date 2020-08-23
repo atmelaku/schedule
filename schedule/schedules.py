@@ -69,43 +69,43 @@ def delete_schedule(id):
     cur.close()
     return redirect(url_for('schedules.schedule'))
 
-@bp.route('/<int:id>/edit_schedule', methods=('GET', 'POST',))
-def edit_schedule(id):
-
-    cur = db.get_db().cursor()
-
-    cur.execute(
-    'SELECT years, months, days, date, shift, description  FROM schedule WHERE id = %s',
-        (id,)
-
-    )
-
-    schedules = cur.fetchone()
-
-
-
-    if request.method == "POST":
-
-        years = request.form.get('years')
-        months = request.form.get('months')
-        days = request.form.get('days')
-        date = request.form.get('date')
-        shift = request.form.get('shift')
-        description = request.form.get('description')
-
-
-
-
-
-        cur.execute(
-                'UPDATE schedule SET years = %s, months = %s, days = %s, date = %s, shift = %s, description = %s'
-                ' WHERE id = %s',
-                (years, months, days, date, shift, description, id)
-        )
-        g.db.commit()
-
-        cur.close()
-        return redirect(url_for('schedules.schedule'))
-
-
-    return render_template("edit.html", schedule=schedule)
+# @bp.route('/<int:id>/edit_schedule', methods=('GET', 'POST',))
+# def edit_schedule(id):
+#
+#     cur = db.get_db().cursor()
+#
+#     cur.execute(
+#     'SELECT years, months, days, date, shift, description  FROM schedule WHERE id = %s',
+#         (id,)
+#
+#     )
+#
+#     schedules = cur.fetchone()
+#
+#
+#
+#     if request.method == "POST":
+#
+#         years = request.form.get('years')
+#         months = request.form.get('months')
+#         days = request.form.get('days')
+#         date = request.form.get('date')
+#         shift = request.form.get('shift')
+#         description = request.form.get('description')
+#
+#
+#
+#
+#
+#         cur.execute(
+#                 'UPDATE schedule SET years = %s, months = %s, days = %s, date = %s, shift = %s, description = %s'
+#                 ' WHERE id = %s',
+#                 (years, months, days, date, shift, description, id)
+#         )
+#         g.db.commit()
+#
+#         cur.close()
+#         return redirect(url_for('schedules.schedule'))
+#
+#
+#     return render_template("edit.html", schedule=schedule)
