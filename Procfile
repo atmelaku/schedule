@@ -1,1 +1,1 @@
-web: flask init-db; gunicorn "flasktodo:create_app()"
+web: gunicorn "schedule:create_app()"
