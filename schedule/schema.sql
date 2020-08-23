@@ -21,7 +21,7 @@ CREATE TABLE users (
 
 CREATE TABLE schedule (
     id bigserial PRIMARY KEY,
-    author_id INTEGER NOT NULL,
+    author_id INTEGER,
     years bigserial,
     months text,
     days text,
