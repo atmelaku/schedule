@@ -18,7 +18,15 @@
       <div class="column">
       <div class="form-group row">
         <label class="col-sm-2 col-form-label" for="years">Year:</label>
-        <input type="text" name="years" id="years"><br>
+        <input type="text" name="years" id="years" list="years"><br>
+        <datalist id="years">
+          <option value="2020">2020</option>
+          <option value="2021">2021</option>
+          <option value="2022">2022</option>
+          <option value="2023">2023</option>
+          <option value="2024">2024</option>
+          <option value="2025">2025</option>
+        </datalist>
       </div>
 
       <div class="form-group row">
@@ -43,7 +51,17 @@
 
       <div class="form-group row">
         <label class="col-sm-2 col-form-label" for="days">Day:</label>
-        <input type="text" name="days" required><br>
+        <input type="text" name="days" list="days" required><br>
+        <datalist id="days">
+          <option value="Monday">Monday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Wendesday">Wendesday</option>
+          <option value="Tuesday">Tuesday</option>
+          <option value="Friday">Friday</option>
+          <option value="Saturday">Saturday</option>
+          <option value="Sunday">Sunday</option>
+
+        </datalist>
       </div>
 
       <div class="form-group row">
@@ -103,7 +121,11 @@
 
         <div class="form-group row">
           <label class="col-sm-2 col-form-label" for="description">House:</label>
-          <input type="text" name="description" id="dscription">
+          <input type="text" name="description" id="dscription" list="houses">
+
+          <datalist id="houses">
+            <option value="horseshoeroad">2020</option>
+          </datalist>
 
         </div>
 
@@ -149,7 +171,7 @@
           <input class="danger" type="submit" value="Delete" onclick="return confirm('Are you sure?');">
         </form>
 
-        
+
       </td>
 
     </tr>
