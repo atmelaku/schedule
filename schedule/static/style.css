@@ -10,8 +10,11 @@ html {
 }
 
 body {
-  background: lightblue;
+  font-family: 'Playfair Display', serif;
+  color: white;
+  background: #2F4F4F;
 }
+
 
 .column {
 
