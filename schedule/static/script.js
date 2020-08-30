@@ -7,4 +7,4 @@ function random_bg_color() {
 
     document.body.style.background = bgColor;
     }
-setInterval(random_bg_color, 86400);
+setInterval(random_bg_color, 86400000);
